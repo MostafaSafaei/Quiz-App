@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "question": "A flashing red traffic light signifies that a driver should do what?",
+        "quiz-id": 1
+    },
+    {
+        "id": 2,
+        "question": "A pita is a type of what?",
+        "quiz-id": 1
+    },
+    {
+        "id": 3,
+        "question": "A portrait that comically exaggerates a person's physical traits is called a what?",
+        "quiz-id": 1
+    },
+    {
+        "id": 4,
+        "question": "A triptych is a work of art that is painted on how many panels?",
+        "quiz-id": 1
+    },
+    {
+        "id": 5,
+        "question": "An airplane's black box is usually what color?",
+        "quiz-id": 1
+    },
+    {
+        "id": 6,
+        "question": "At what age can someone first attend an R-rated movie without an accompanying adult?",
+        "quiz-id": 1
+    },
+    {
+        "id": 7,
+        "question": "Cheddar cheese got its name from a village in what country?",
+        "quiz-id": 1
+    },
+    {
+        "id": 8,
+        "question": "Excluding wisdom teeth, how many adult teeth do humans have?",
+        "quiz-id": 1
+    },
+    {
+        "id": 9,
+        "question": "For a man and woman on a date, 'dutch treat' means what?",
+        "quiz-id": 1
+    },
+    {
+        "id": 10,
+        "question": "How do you express 3/4 as a decimal?",
+        "quiz-id": 1
+    }
+]
