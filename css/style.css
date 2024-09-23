@@ -52,9 +52,20 @@ h3{
     background-color: white;
     margin-bottom: 1rem;
 }
+input {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0;
+    color: #56a5eb;
+    text-decoration: none;
+    background-color: white;
+    margin-bottom: 1rem;
+}
 .btn:hover{
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 #56b9eb80;
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
@@ -66,7 +77,6 @@ h3{
 .answer-container{
     display: flex;
     margin-bottom: 0.5rem;
-    width: 100%;
     font-size: 1.8rem;
     border: 0.1rem solid rgba(86, 165, 235, 0.25);
     background-color: white;
@@ -74,7 +84,7 @@ h3{
 }
 .answer-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 #56b9eb80;
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
@@ -85,4 +95,5 @@ h3{
 }
 .answer-text {
     padding: 1.5rem;
+    width: 100%;
 }

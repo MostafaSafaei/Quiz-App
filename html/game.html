@@ -6,32 +6,88 @@
     <title>Rabit Quiz - Play</title>
 </head>
 <body>
-    <div id="app" class="container">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <h2>
-                What is the answer to this question?
-            </h2>
-
-            <div class="answer-container">
-                <p class="answer-prefix">A</p>
-                <p class="answer-text" data-number="1">Answer 1</p>
+    <div id="app">
+        <!-- playing -->
+        <div v-show="!endGame">
+            <div v-show="!playing" class="container">
+                <div @click="startGame" class="btn" style="margin-bottom: 0;">
+                    START
+                </div>
             </div>
-
-            <div class="answer-container">
-                <p class="answer-prefix">B</p>
-                <p class="answer-text" data-number="2">Answer 2</p>
-            </div>
-
-            <div class="answer-container">
-                <p class="answer-prefix">C</p>
-                <p class="answer-text" data-number="3">Answer 3</p>
-            </div>
-
-            <div class="answer-container">
-                <p class="answer-prefix">D</p>
-                <p class="answer-text" data-number="4">Answer 4</p>
+            <div v-show="playing" class="container">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h2>
+                        {{currentQuestion.question}}
+                    </h2>
+        
+                    <div style="width: 100%;" v-for="t in tempAnswer">
+                        <div @click="selectAnswer(t)" class="answer-container">
+                            <!-- <p class="answer-prefix">{{bullet[t.id-1]}}</p> -->
+                            <p class="answer-prefix">{{t.bullet}}</p>
+                            <p class="answer-text" data-number="1" v-bind:style= "[t.id === tempSelectedAnswer.id ? {'background': '#b8deff'} : {'background': 'white'}]">{{t.answer}}</p>
+                        </div>
+                    </div>
+    <!--     
+                    <div class="answer-container">
+                        <p class="answer-prefix">B</p>
+                        <p class="answer-text" data-number="2">Answer 2</p>
+                    </div>
+        
+                    <div class="answer-container">
+                        <p class="answer-prefix">C</p>
+                        <p class="answer-text" data-number="3">Answer 3</p>
+                    </div>
+        
+                    <div class="answer-container">
+                        <p class="answer-prefix">D</p>
+                        <p class="answer-text" data-number="4">Answer 4</p>
+                    </div> -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 10rem;">
+                        <div @click="previous" class="btn">
+                            Previous
+                        </div>
+                        <div @click="nextQuestion" class="btn">
+                            Next
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- end Game -->
+         <div v-show="endGame" class="container">
+            <div style="text-align: center;">
+                <h1>
+                    End Game
+                </h1>
+                <h1>{{score}}</h1>
+                <form style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    
+                    <input type="text" name="username" id="username" placeholder="username" />
+                    <button
+                      type="submit"
+                      class="btn"
+                      id="saveScoreBtn"
+                      onclick="saveHighScore(event)"
+                      disabled
+                    >
+                      Save
+                    </button>
+                </form>
+                <div style="display: flex; flex-direction: column;">
+                    <a href="/game.html">
+                        <button class="btn">
+                            Quiz Again
+                        </button>
+                    </a>
+                    <a href="/">
+                        <button class="btn">
+                            Go Home
+                        </button>
+                    </a>
+                </div>
+            </div>
+         </div>
     </div>
 
     <script src="../js/vue.js"></script>

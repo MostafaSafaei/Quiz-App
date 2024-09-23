@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "player-id": 1,
-        "question-id": 1,
-        "answer-id": 1
+        "playerId": 1,
+        "questionId": 1,
+        "answerId": 1
     }
 ]
