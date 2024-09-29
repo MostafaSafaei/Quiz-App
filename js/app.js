@@ -15,6 +15,7 @@ const app = Vue.createApp({
             playing: false,
             endGame: false,
             submitedModal: false,
+            playerDetailModal: false,
             playerName: "",
             totalScore: 0,
             questionCounter: 0,
@@ -164,6 +165,9 @@ const app = Vue.createApp({
             }, 2500);
 
             this.playerName = ""
+        },
+        userDetail(player){
+            this.playerDetailModal = true
         }
     },
 })
