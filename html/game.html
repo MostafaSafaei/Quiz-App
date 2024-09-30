@@ -32,7 +32,7 @@
             <div v-show="playing" class="container">
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <h2>
-                        {{currentQuestion.question}}
+                        {{currentQuestion.id}}. {{currentQuestion.question}}
                     </h2>
         
                     <div style="width: 100%;" v-for="t in tempAnswer">

@@ -3,5 +3,50 @@
         "id": 1,
         "playerId": 1,
         "answerId": 1
+    },
+    {
+        "id": 2,
+        "playerId": 1,
+        "answerId": 5
+    },
+    {
+        "id": 3,
+        "playerId": 1,
+        "answerId": 9
+    },
+    {
+        "id": 4,
+        "playerId": 1,
+        "answerId": 13
+    },
+    {
+        "id": 5,
+        "playerId": 1,
+        "answerId": 17
+    },
+    {
+        "id": 6,
+        "playerId": 1,
+        "answerId": 21
+    },
+    {
+        "id": 7,
+        "playerId": 1,
+        "answerId": 25
+    },
+    {
+        "id": 8,
+        "playerId": 1,
+        "answerId": 29
+    },
+    {
+        "id": 9,
+        "playerId": 1,
+        "answerId": 33
+    },
+    {
+        "id": 10,
+        "playerId": 1,
+        "answerId": 37
     }
 ]

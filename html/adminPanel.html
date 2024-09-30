@@ -8,9 +8,9 @@
 <body>
     
     <div id="app">
-        <div class="container">
+        <div class="container" v-show="!playerDetailModal">
 
-            <div v-show="!playerDetailModal" style="display: flex; flex-direction: column; gap: 2.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 2.5rem;">
                 <div v-for="p in player" style="display: flex; flex-direction: column; align-items: center; border: 1px solid #56a5eb; padding: 3rem; background: white; gap: 3rem;">
 
                     <div style="display: flex; justify-content: space-around; width: 100%;">
@@ -39,8 +39,58 @@
                 </div>
             </div>
 
-            <div v-show="playerDetailModal">
-                
+        </div>
+
+        <div v-show="playerDetailModal" class="container-full">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 3rem; padding: 3rem; border: 1px solid #56a5eb; background: white;">
+                <div style="display: flex; justify-content: space-between; width: 100%; border-bottom: 1px solid #56a5eb; padding-bottom: 2rem;">
+                    <h3>
+                        Name: {{panelPlayer.name}}
+                    </h3>
+                    <h3>
+                        id: {{panelPlayer.id}}
+                    </h3>
+                </div>
+
+                <div style="display: flex; justify-content: center;">
+                    <h3>
+                        Quiz: {{panelQuiz.title}}
+                    </h3>
+                </div>
+
+                <div v-for="pq in panelQuestions" style="display: flex; flex-direction: column; gap: 2rem; width: 100%; border-top: 1px dashed #56a5eb; padding-top: 2rem;">
+                    <h4 style="display: flex; width: 100%;">
+                        {{pq.id}}. {{pq.question}}
+                    </h4>
+
+                    <div>
+                        <div v-for="a in answers">
+                            <div v-show="a.questionId === pq.id" style="display: flex;" class="answer-container">
+                                <p class="answer-prefix">{{a.bullet}}</p>
+                                <p class="answer-text" :style="[ a.correct ? {'background': '#b8deff'} : {'background' : 'white'}]">{{a.answer}}</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; justify-content: center; border-top: 1px dashed #56a5eb; padding-top: 1rem; margin-top: 2rem;">
+                            <h3>
+                                {{panelPlayer.name}}`s Answer
+                            </h3>
+                        </div>
+
+                        <div v-for="pa in panelAnswers">
+                            <div v-show="pa.questionId === pq.id" style="display: flex;" class="answer-container">
+                                <p class="answer-prefix">{{pa.bullet}}</p>
+                                <p class="answer-text" :style="[ pa.correct ? {'background': '#71eb95'} : {'background' : '#ff4d4d'}]">{{pa.answer}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; border-top: 2px solid #56a5eb; border-bottom: 2px solid #56a5eb; padding-top: 2.5rem; margin-top: 4rem; width: 100%;">
+                    <h2>
+                        {{panelPlayer.name}}`s Score: {{panelTotalScore}}
+                    </h2>
+                </div>
             </div>
         </div>
 

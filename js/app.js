@@ -22,6 +22,12 @@ const app = Vue.createApp({
             maxQuestion: 10,
             tempSelectedAnswer: {},
             userAnswers: [],
+            panelPlayer: {},
+            panelScore: [],
+            panelAnswers: [],
+            panelQuestions: [],
+            panelQuiz: {},
+            panelTotalScore: 0,
         }
     },
 
@@ -167,7 +173,56 @@ const app = Vue.createApp({
             this.playerName = ""
         },
         userDetail(player){
+            this.panelPlayer= {}
+            this.panelScore= []
+            this.panelAnswers= []
+            this.panelQuestions= []
+            this.panelQuiz= {}
+            this.panelTotalScore = 0
+
             this.playerDetailModal = true
+            this.panelPlayer = player
+            for (s in this.score){
+                if(this.score[s].playerId === player.id){
+                    this.panelScore.push(this.score[s])
+                }
+            }
+
+            for(ps in this.panelScore){
+                for(a in this.answers){
+                    if(this.answers[a].id === this.panelScore[ps].answerId){
+                        this.panelAnswers.push(this.answers[a])
+                    }
+                }
+            }
+
+            for(pa in this.panelAnswers){
+                for(q in this.questions){
+                    if(this.questions[q].id === this.panelAnswers[pa].questionId){
+                        this.panelQuestions.push(this.questions[q])
+                    }
+                }
+            }
+
+            for(q in this.quiz){
+                if(this.panelQuestions[1].quizId === this.quiz[q].id){
+                    this.panelQuiz = this.quiz[q]
+                }
+            }
+
+            for(pa in this.panelAnswers){
+                if(this.panelAnswers[pa].correct){
+                    this.panelTotalScore++
+                }
+            }
+
+
+            console.log(this.panelPlayer)
+            console.log(this.panelScore)
+            console.log(this.panelAnswers)
+            console.log(this.panelQuestions)
+            console.log(this.panelQuiz)
+            console.log(this.panelTotalScore)
         }
     },
 })
