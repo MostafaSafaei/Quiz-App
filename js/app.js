@@ -182,6 +182,7 @@ const app = Vue.createApp({
 
             this.playerDetailModal = true
             this.panelPlayer = player
+
             for (s in this.score){
                 if(this.score[s].playerId === player.id){
                     this.panelScore.push(this.score[s])
@@ -223,6 +224,12 @@ const app = Vue.createApp({
             console.log(this.panelQuestions)
             console.log(this.panelQuiz)
             console.log(this.panelTotalScore)
+        },
+        backPlayerModal(){
+            this.playerDetailModal = false
+        },
+        deletePlayer(){
+            this.playerDetailModal = false
         }
     },
 })

@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>Admin Panel</title>
 </head>
 <body>
     
@@ -90,6 +90,15 @@
                     <h2>
                         {{panelPlayer.name}}`s Score: {{panelTotalScore}}
                     </h2>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; width: 100%;">
+                    <button @click="backPlayerModal" class="btn">
+                        Back
+                    </button>
+                    <button @click="deletePlayer" class="btn-red">
+                        Delete
+                    </button>
                 </div>
             </div>
         </div>

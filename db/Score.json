@@ -48,5 +48,55 @@
         "id": 10,
         "playerId": 1,
         "answerId": 37
+    },
+    {
+        "id": 11,
+        "playerId": 2,
+        "answerId": 2
+    },
+    {
+        "id": 12,
+        "playerId": 2,
+        "answerId": 6
+    },
+    {
+        "id": 13,
+        "playerId": 2,
+        "answerId": 10
+    },
+    {
+        "id": 14,
+        "playerId": 2,
+        "answerId": 14
+    },
+    {
+        "id": 15,
+        "playerId": 2,
+        "answerId": 19
+    },
+    {
+        "id": 16,
+        "playerId": 2,
+        "answerId": 23
+    },
+    {
+        "id": 17,
+        "playerId": 2,
+        "answerId": 26
+    },
+    {
+        "id": 18,
+        "playerId": 2,
+        "answerId": 31
+    },
+    {
+        "id": 19,
+        "playerId": 2,
+        "answerId": 34
+    },
+    {
+        "id": 20,
+        "playerId": 2,
+        "answerId": 40
     }
 ]

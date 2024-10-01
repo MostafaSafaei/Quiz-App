@@ -69,13 +69,13 @@ h4{
     background-color: white;
     margin-bottom: 1rem;
 }
-input {
+.btn-red {
     font-size: 1.8rem;
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0;
-    color: #56a5eb;
+    border: 0.1rem solid #eb5656;
+    color: #eb5656;
     text-decoration: none;
     background-color: white;
     margin-bottom: 1rem;
@@ -86,10 +86,27 @@ input {
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
+.btn-red:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #eb5b5680;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
 .btn[disabled]:hover {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+input {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0;
+    color: #56a5eb;
+    text-decoration: none;
+    background-color: white;
+    margin-bottom: 1rem;
 }
 .answer-container{
     display: flex;
